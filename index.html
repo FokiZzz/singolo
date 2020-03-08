@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Singolo</title>
+  </head>
+  <body>
+    
+    <!-- Sprite -->
+    <svg style="display: none;">
+      <symbol id="arrow" viewBox="0 0 492 492">
+        <g>
+          <path
+            d="M198.608,246.104L382.664,62.04c5.068-5.056,7.856-11.816,7.856-19.024c0-7.212-2.788-13.968-7.856-19.032l-16.128-16.12
+        C361.476,2.792,354.712,0,347.504,0s-13.964,2.792-19.028,7.864L109.328,227.008c-5.084,5.08-7.868,11.868-7.848,19.084
+        c-0.02,7.248,2.76,14.028,7.848,19.112l218.944,218.932c5.064,5.072,11.82,7.864,19.032,7.864c7.208,0,13.964-2.792,19.032-7.864
+        l16.124-16.12c10.492-10.492,10.492-27.572,0-38.06L198.608,246.104z"
+          />
+        </g>
+      </symbol>
+    </svg>
+
+    <!--Header-->
+    <header class="header">
+      <div class="container">
+        <div class="header__inner">
+          <h1 href="#" class="header__logo">Singolo</h1>
+          <nav class="nav">
+            <a href="#" class="nav__link">Home</a>
+            <a href="#" class="nav__link">Services</a>
+            <a href="#" class="nav__link">Portfolio</a>
+            <a href="#" class="nav__link">About</a>
+            <a href="#" class="nav__link">Contact</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <!--Slider-->
+    <section class="slider">
+      <div class="container">
+        <span class="arrow arrow--left">
+          <svg class="arrow__icon">
+            <use xlink:href="#arrow"></use>
+          </svg>
+        </span>
+        <span class="arrow arrow--right">
+          <svg class="arrow__icon">
+            <use xlink:href="#arrow"></use>
+          </svg>
+        </span>
+        <img
+          class="phone phone--vertical"
+          src="assets/img/slider/iphone_vertical.png"
+          alt="iPhone"
+        />
+        <img
+          class="phone phone--horizontal"
+          src="assets/img/slider/iphone_horizontal.png"
+          alt="iPhone"
+        />
+      </div>
+    </section>
+
+    <!--Services-->
+    <section class="services">
+      <div class="container">
+        <h1 class="services__title">Our Services</h1>
+        <p class="services__description--one">
+          <span
+            >Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum.
+            Duis mollis, non commodo luctus, nisi erat porttitor
+          </span>
+        </p>
+        <p class="services__description--two">
+          <span
+            >ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac
+            cursus commodo, tortor mauris condimentum nibh.</span
+          >
+        </p>
+
+        <div class="advantages">
+          <div class="advantages__block">
+            <div class="advantages__icon">
+              <img
+                class="advantages__icon_img"
+                src="assets/img/services/pen.png"
+                alt="pen"
+              />
+            </div>
+            <div class="advantages__descr">
+              <h2 class="advantages__title">Custom Design</h2>
+              <p class="advantages__text">
+                <span
+                  >Curabitur vestibulum eget mauris quis laoreet. Phasellus in
+                  quam laoreet, viverra lacus ut, ultrices velit.</span
+                >
+              </p>
+            </div>
+          </div>
+          <div class="advantages__block">
+            <div class="advantages__icon ">
+              <img
+                class="advantages__icon_img advantages__icon_img--bulb"
+                src="assets/img/services/bulb.png"
+                alt="bulb"
+              />
+            </div>
+            <div class="advantages__descr">
+              <h2 class="advantages__title">Inovative Ideas</h2>
+              <p class="advantages__text">
+                <span
+                  >Quisque luctus, quam eget molestie commodo, lacus purus
+                  cursus purus, nec rutrum tellus dolor id lorem.</span
+                >
+              </p>
+            </div>
+          </div>
+          <div class="advantages__block">
+            <div class="advantages__icon">
+              <img
+                class="advantages__icon_img advantages__icon_img--heart"
+                src="assets/img/services/heart.png"
+                alt="heart"
+              />
+            </div>
+            <div class="advantages__descr">
+              <h2 class="advantages__title">Love Is The Answer</h2>
+              <p class="advantages__text">
+                <span
+                  >Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet
+                  turpis, et consequat felis. Quisque condimentum.</span
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="advantages advantages--two">
+          <div class="advantages__block">
+            <div class="advantages__icon">
+              <img
+                class="advantages__icon_img advantages__icon_img--phone"
+                src="assets/img/services/tablet.png"
+                alt="tablet"
+              />
+            </div>
+            <div class="advantages__descr">
+              <h2 class="advantages__title">Responsive Layout</h2>
+              <p class="advantages__text">
+                <span
+                  >Sed porttitor placerat rhoncus. In at nunc tellus. Maecenas
+                  blandit nunc ligula. Praesent elit leo.</span
+                >
+              </p>
+            </div>
+          </div>
+          <div class="advantages__block">
+            <div class="advantages__icon">
+              <img
+                class="advantages__icon_img advantages__icon_img--bubble"
+                src="assets/img/services/bubble.png"
+                alt="bubble"
+              />
+            </div>
+            <div class="advantages__descr">
+              <h2 class="advantages__title">24/ 7 Support</h2>
+              <p class="advantages__text">
+                <span
+                  >Vivamus vel quam lacinia, tincidunt dui non, vehicula nisi.
+                  Nulla a sem erat. Pellentesque egestas venenatis lorem .</span
+                >
+              </p>
+            </div>
+          </div>
+          <div class="advantages__block">
+            <div class="advantages__icon">
+              <img
+                class="advantages__icon_img"
+                src="assets/img/services/star.png"
+                alt="star"
+              />
+            </div>
+            <div class="advantages__descr">
+              <h2 class="advantages__title">Feel Like A Star</h2>
+              <p class="advantages__text">
+                <span
+                  >Quisque hendrerit purus dapibus, ornare nibh vitae, viverra
+                  nibh. Fusce vitae aliquam tellus.</span
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio -->
+    <section class="portfolio">
+      <div class="container">
+        <h1 class="portfolio__title">Portfolio</h1>
+        <p class="portfolio__description">
+          <span
+            >Duis mollis, est non commodo luctus, nisi erat porttitor ligula,
+            eget lacinia odio sem nec elit.
+          </span>
+        </p>
+        <div class="portfolio__filter">
+          <button class="portfolio__button">All</button>
+          <button class="portfolio__button">Web Design</button>
+          <button class="portfolio__button">Graphic Design</button>
+          <button class="portfolio__button">Artwork</button>
+        </div>
+
+        <div class="portfolio__gallery">
+          <div class="portfolio__work">
+            <img src="assets/img/galery/1.png" alt="" />
+          </div>
+          <div class="portfolio__work">
+            <img src="assets/img/galery/2.png" alt="" />
+          </div>
+          <div class="portfolio__work">
+            <img src="assets/img/galery/3.png" alt="" />
+          </div>
+          <div class="portfolio__work">
+            <img src="assets/img/galery/4.png" alt="" />
+          </div>
+          <div class="portfolio__work">
+            <img src="assets/img/galery/5.png" alt="" />
+          </div>
+          <div class="portfolio__work">
+            <img src="assets/img/galery/6.png" alt="" />
+          </div>
+          <div class="portfolio__work">
+            <img src="assets/img/galery/7.png" alt="" />
+          </div>
+          <div class="portfolio__work">
+            <img src="assets/img/galery/8.png" alt="" />
+          </div>
+          <div class="portfolio__work">
+            <img src="assets/img/galery/9.png" alt="" />
+          </div>
+          <div class="portfolio__work">
+            <img src="assets/img/galery/10.png" alt="" />
+          </div>
+          <div class="portfolio__work">
+            <img src="assets/img/galery/11.png" alt="" />
+          </div>
+          <div class="portfolio__work">
+            <img src="assets/img/galery/12.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Us -->
+    <section class="about">
+      <div class="container">
+        <h1 class="about__title">About Us</h1>
+        <p class="about__description">
+          <span
+            >Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum.
+            Duis mollis, non commodo luctus, nisi erat porttitor
+          </span>
+        </p>
+        <p class="about__description--two">
+          <span
+            >ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac
+            cursus commodo, tortor mauris condimentum nibh.</span
+          >
+        </p>
+
+        <div class="about__team">
+          <div class="about__person">
+            <img src="assets/img/about/1.png" alt="" />
+            <p class="about__person-name">
+              Adam Jensen 
+            </p>
+            <p class="about__person-description">
+              <span
+                >Quisque luctus, quam eget molestie commodo, lacus purus cursus
+                purus, nec rutrum tellus dolor id lorem.</span
+              >
+            </p>
+            <div class="social">
+              <a href="#"
+                ><div class="social__link social__link--facebook"></div
+              ></a>
+              <a href="#"
+                ><div class="social__link social__link--google"></div
+              ></a>
+              <a href="#"
+                ><div class="social__link social__link--twitter"></div
+              ></a>
+              <a href="#"
+                ><div class="social__link social__link--linkedin"></div
+              ></a>
+            </div>
+          </div>
+
+          <div class="about__person">
+            <img src="assets/img/about/2.png" alt="" />
+            <p class="about__person-name">Desmond Miles</p>
+            <p class="about__person-description">
+              <span
+                >Curabitur vestibulum eget mauris quis laoreet. Phasellus in
+                quam laoreet, viverra lacus ut, ultrices velit.</span
+              >
+            </p>
+            <div class="social">
+              <a href="#"
+                ><div class="social__link social__link--facebook"></div
+              ></a>
+              <a href="#"
+                ><div class="social__link social__link--google"></div
+              ></a>
+              <a href="#"
+                ><div class="social__link social__link--twitter"></div
+              ></a>
+              <a href="#"
+                ><div class="social__link social__link--linkedin"></div
+              ></a>
+            </div>
+          </div>
+
+          <div class="about__person">
+            <img src="assets/img/about/3.png" alt="" />
+            <p class="about__person-name">Scolara Visari</p>
+            <p class="about__person-description">
+              <span
+                >Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet
+                turpis, et consequat felis. Quisque condimentum.</span
+              >
+            </p>
+            <div class="social">
+              <a href="#"
+                ><div class="social__link social__link--facebook"></div
+              ></a>
+              <a href="#"
+                ><div class="social__link social__link--google"></div
+              ></a>
+              <a href="#"
+                ><div class="social__link social__link--twitter"></div
+              ></a>
+              <a href="#"
+                ><div class="social__link social__link--linkedin"></div
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Get a Quote -->
+    <section class="getquote">
+      <div class="container">
+        <h1 class="getquote__title">Get a Quote</h1>
+        <p class="getquote__description">
+          <span
+            >Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum.
+            Duis mollis, non commodo luctus, nisi erat porttitor
+          </span>
+        </p>
+        <p class="getquote__description--two">
+          <span
+            >ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac
+            cursus commodo, tortor mauris condimentum nibh.</span
+          >
+        </p>
+        <div class="contact">
+          <form method="post" class="contact__form">
+            <input
+              placeholder="Name (Required)"
+              name="name"
+              pattern="[a-zA-Zа-яА-ЯёЁ]+"
+              required
+            />
+            <input
+              placeholder="Email (Required)"
+              type="email"
+              name="email"
+              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+              required
+            />
+            <input placeholder="Subject" type="text" name="text" />
+            <textarea
+              placeholder="Describe your project in detail..."
+              rows="10"
+              cols="45"
+              name="text"
+            ></textarea>
+            <button class="form__btn" type="submit">Submit</button>
+          </form>
+
+          <div class="contact__information">
+            <div class="contact__title">Contact Information</div>
+            <p class="contact__description">
+              <span
+                >Quisque hendrerit purus dapibus, ornare nibh vitae, viver- ra
+                nibh. Fusce vitae aliquam tellus. Proin sit amet volutpat
+                libero. Nulla sed nunc et tortor luctus faucibus. Morbi at
+                aliquet turpis, et consequat felis.
+              </span>
+            </p>
+            <p class="contact-addres">
+              <i class="icon-location"></i>Elm St. 14/05 Lost City
+            </p>
+            <p class="contact-phone">
+              <i class="icon-phone"></i
+              ><a href="tel:03528 331 86 35">03528 331 86 35</a>
+            </p>
+            <p class="contact-email">
+              <i class="icon-mail"></i
+              ><a href="mailto:info@hexalcorp.com">info@singolo.com</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__inner">
+          <p class="copyright">© Copyright 2013</p>
+          <div class="social social--footer">
+            <a href="#"
+              ><div class="social__link social__link--facebook"></div
+            ></a>
+            <a href="#"
+              ><div class="social__link social__link--google"></div
+            ></a>
+            <a href="#"
+              ><div class="social__link social__link--twitter"></div
+            ></a>
+            <a href="#"
+              ><div class="social__link social__link--linkedin"></div
+            ></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
