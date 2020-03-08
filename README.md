@@ -1,2 +1,2 @@
-#Deploy version
+Deploy version
 https://fokizzz.github.io/singolo/
