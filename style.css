@@ -28,15 +28,14 @@
 
 @font-face {
   font-family: "fontello";
-  src: url('assets/fonts/fontello.eot');
-  src: url('assets/fonts/fontello.eot') format('embedded-opentype'),
-       url('assets/fonts/fontello.woff2') format('woff2'),
-       url('assets/fonts/fontello.woff') format('woff'),
-       url('assets/fonts/fontello.ttf') format('truetype');
+  src: url("assets/fonts/fontello.eot");
+  src: url("assets/fonts/fontello.eot") format("embedded-opentype"),
+    url("assets/fonts/fontello.woff2") format("woff2"),
+    url("assets/fonts/fontello.woff") format("woff"),
+    url("assets/fonts/fontello.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
-
 
 body {
   margin: 0;
@@ -71,6 +70,11 @@ button {
   cursor: pointer;
 }
 
+.hidden {
+  display: none;
+}
+
+
 /* Container
 ===================*/
 .container {
@@ -88,7 +92,35 @@ button {
   padding: 29px 0;
   background-color: #2d303a;
   border-bottom: 6px solid #323746;
+  position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+  z-index: 5;
 }
+
+.header_fixed{
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 10px 0;
+  animation: showElement;
+  animation-duration: 0.3s;
+  opacity: 0.8;
+}
+
+@keyframes showElement{
+  0% {
+      opacity: 0;
+      top: -70px;
+  }
+  
+  100% {
+      opacity: 1;
+      top: 0;
+  }
+}
+
 
 .header__inner {
   display: flex;
@@ -144,13 +176,40 @@ button {
   color: #f06c64;
 }
 
+.active {
+  color: #f06c63;
+}
+
 /* Slider
 ===================*/
 
-.slider {
-  background-color: #f06c64;
-  min-height: 600px;
-  border-bottom: 6px solid #ea676b;
+.slider{
+  position: relative;
+  margin-top: 96px;
+}
+
+/* Анимация слайдов */
+.slider .item {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 0.8s;
+}
+@-webkit-keyframes fade {
+  from {
+      opacity: 0
+  }
+  to {
+      opacity: 1
+  }
+}
+@keyframes fade {
+  from {
+      opacity: 0
+  }
+  to {
+      opacity: 1
+  }
 }
 
 .arrow {
@@ -158,6 +217,7 @@ button {
   display: flex;
   height: 25px;
   width: 25px;
+  z-index: 2;
 }
 
 .arrow--left {
@@ -185,18 +245,89 @@ button {
   fill: #2d303a;
 }
 
-.phone {
+
+/* Slide One */
+
+.slide__one {
+  min-height: 600px;
+  background-color: #f06c64;
+  border-bottom: 6px solid #ea676b;
+}
+
+.phone__vertical {
+  position: absolute;
+  left: 80px;
+  top: 53px;
+}
+
+.mobile--vertical {
+  position: absolute;
+  z-index: 0;
+}
+.display--vertical {
+  position: absolute;
+  top: 65px;
+  left: 16px;
+  z-index: 1;
+}
+.shadow--vertical{
+  position: absolute;
+  z-index: 0;
+  top: 53px;
+  left: 82px;
+}
+
+.phone__horizontal {
+  position: absolute;
+  left: 395px;
+  top: 174px;
+}
+
+.mobile--horizontal {
+  position: absolute;
+  z-index: 0;
+}
+.display--horizontal {
+  position: absolute;
+  top: 14px;
+  left: 60px;
+  z-index: 1;
+}
+.shadow--horizontal{
+  position: absolute;
+  top: 174px;
+  left: 395px;
+  z-index: 0;
+}
+
+/* Slide Two*/
+
+.slide__two {
+  min-height: 600px;
+  background-color: #648BF0;
+  border-bottom: 6px solid rgb(83, 132, 255);
+}
+
+.phone__group{
+  position: absolute;
+  left: 192px;
+  top: 43px;
+}
+.mobile-one{
+  z-index: 1;
+}
+.mobile-one{
   position: relative;
+  top: -90px;
+  left: 29px;
+  z-index: 0;
 }
 
-.phone--vertical {
-  top: 52px;
-  left: 72px;
-}
-
-.phone--horizontal {
-  top: -70px;
-  left: 141px;
+.mobile-three{
+  position: relative;
+  top: -90px;
+  left: -30px;
+  z-index: 0;
 }
 
 /* Services
@@ -312,7 +443,6 @@ button {
   letter-spacing: 0.2px;
 }
 
-
 /* Portfolio
 ===================*/
 
@@ -356,7 +486,21 @@ button {
   font-size: 12px;
   font-weight: 400;
   transition: all 0.2s linear;
+  outline: none;
 }
+
+.portfolio__button--active{
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+
+
+
 
 .portfolio__button:hover {
   border: 1px solid #dedede;
@@ -373,9 +517,29 @@ button {
 }
 
 .portfolio__work {
+  overflow: hidden;
   height: 100%;
   width: calc(25% - 15px);
   margin-bottom: 16px;
+  display: none;
+  
+}
+.portfolio__img{
+  width: 100%;
+}
+
+
+.work__active {
+	border: 5px solid #F06C64;
+}
+
+
+.show {
+  display: block;
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
 }
 
 /* About Us
@@ -572,7 +736,6 @@ textarea:focus {
   background-color: #b13438;
 }
 
-
 .contact__information {
   width: calc(34% - 15px);
   margin-left: 20px;
@@ -607,12 +770,17 @@ i {
   text-decoration: none;
 }
 
+.icon-location::before {
+  content: "\e800";
+}
+.icon-phone::before {
+  content: "\e801";
+}
+.icon-mail::before {
+  content: "\e802";
+}
 
-.icon-location::before { content: '\e800'; } 
-.icon-phone::before { content: '\e801'; } 
-.icon-mail::before { content: '\e802'; } 
-
-.contact-addres i{
+.contact-addres i {
   top: -7px;
   left: -4px;
   text-align: center;
@@ -635,7 +803,7 @@ i {
   color: #ffffff;
 }
 
-.contact-phone i{
+.contact-phone i {
   top: -5px;
   left: -4px;
   text-align: center;
@@ -653,7 +821,7 @@ i {
   letter-spacing: 0.1px;
 }
 
-.contact-email i{
+.contact-email i {
   top: -3px;
   left: -4px;
   text-align: center;
@@ -685,25 +853,70 @@ i {
 /* Footer
 ===================*/
 
-.footer{
+.footer {
   padding: 22px 0;
   background-color: #2d303a;
 }
 
-.footer__inner{
+.footer__inner {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.social--footer{
+.social--footer {
   margin: 0;
 }
 
-.copyright{
+.copyright {
   margin: 0;
   color: #666d89;
   font-size: 12px;
   word-spacing: -1.2px;
   letter-spacing: 0.1px;
+}
+
+/* Modal 
+===================*/
+
+.alert {
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	top: 0;
+	left: 0;
+	background: rgba(145, 85, 85, 0.5);
+}
+
+.alert__hidden {
+	display: none;
+}
+
+.alert__msg {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	color: white;
+	background: #f06c64;
+	border-radius: 5px;
+	padding: 25px;
+	transform: translate3d(-50%, -50%, 20px);
+}
+
+.contact__btn {
+	padding: 10px 20px;
+	color: #f2f2f2;
+	background: #d6564f;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: all .2s linear;
+}
+
+.contact__btn:hover {
+	background: #ec5f58;
+}
+
+.contact__btn:active {
+	background: rgb(224, 97, 97);
 }
